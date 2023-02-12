@@ -1,6 +1,13 @@
-f = open(r"C:\Users\ninja\Documents\Programas\Python\AOC\AdventureOfCode\Exercise 1\input.txt")
+f = ""
 
-list = f.readlines()
+while True:
+    line = input()
+    if line:
+        f += line + "\n"
+    else:
+        break
+
+list = f.splitlines()
 
 firstMaxValue = 0
 secondMaxValue = 0
@@ -22,7 +29,7 @@ for i in list:
         if (sum > thirdMaxValue and sum < secondMaxValue):
             thirdMaxValue = sum
         sum = 0
-        
+
 if (sum > firstMaxValue):
     thirdMaxValue = secondMaxValue
     secondMaxValue = firstMaxValue
