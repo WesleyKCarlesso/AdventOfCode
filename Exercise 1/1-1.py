@@ -1,6 +1,9 @@
-f = open(r"C:\Users\ninja\Documents\Programas\Python\AOC\AdventureOfCode\Exercise 1\input.txt")
+import sys
 
-list = f.readlines()
+list = []
+
+for line in sys.stdin:
+    list.append(line.rstrip())
 
 maxValue = 0
 sum = 0

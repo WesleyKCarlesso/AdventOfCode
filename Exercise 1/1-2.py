@@ -1,13 +1,9 @@
-f = ""
+import sys
 
-while True:
-    line = input()
-    if line:
-        f += line + "\n"
-    else:
-        break
+list = []
 
-list = f.splitlines()
+for line in sys.stdin:
+    list.append(line.rstrip())
 
 firstMaxValue = 0
 secondMaxValue = 0
@@ -29,7 +25,7 @@ for i in list:
         if (sum > thirdMaxValue and sum < secondMaxValue):
             thirdMaxValue = sum
         sum = 0
-
+        
 if (sum > firstMaxValue):
     thirdMaxValue = secondMaxValue
     secondMaxValue = firstMaxValue
